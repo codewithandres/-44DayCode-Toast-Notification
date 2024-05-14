@@ -36,6 +36,12 @@ const createToast = (id) => {
      `;
 
     notification.appendChild(toast);
+    setTimeout(() => removeToast(toast), toastDetails.timer);
+};
+
+const removeToast = (toast) => {
+    toast.classList.add('hide');
+    setTimeout(() => toast.remove(), 500);
 };
 
 [...buttons].map(button =>
