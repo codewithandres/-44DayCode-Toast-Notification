@@ -1,7 +1,7 @@
-#Proyecto de Notificaciones Toast 
 
 ![image](https://github.com/dizedesign/-44DayCode-Toast-Notification/assets/141795901/e8b73019-f88d-43b0-8a5b-1f063052880b)
 
+## Proyecto de Notificaciones Toast 
 
 ## Descripción 📝
 Este proyecto implementa un sistema de notificaciones estilo "toast" que permite a los usuarios recibir mensajes breves y concisos en su interfaz web. Estos mensajes pueden ser de éxito, error, advertencia o información.
