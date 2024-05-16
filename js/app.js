@@ -20,7 +20,7 @@ const toastDetails = {
         icon: 'fa-circle-info',
         text: 'Info: This is an information toast.',
     }
-}
+};
 
 const createToast = (id) => {
     const { icon, text } = toastDetails[id];
@@ -32,15 +32,15 @@ const createToast = (id) => {
            <i class="fa-solid ${icon}"></i>
             <span>${text}</span>
         </div>
-        <i class="fa-solid fa-xmark" onclick="removeToast(this.parentElement)"></i>
-     `;
+        <i class="fa-solid fa-xmark" onclick="removeToast(this.parentElement)"></i>`;
 
     notification.appendChild(toast);
-    setTimeout(() => removeToast(toast), toastDetails.timer);
+    toast.timeoutId = setTimeout(() => removeToast(toast), toastDetails.timer);
 };
 
 const removeToast = (toast) => {
     toast.classList.add('hide');
+    if (toast.timeoutId ) clearTimeout(toast.timeoutId)
     setTimeout(() => toast.remove(), 500);
 };
 
